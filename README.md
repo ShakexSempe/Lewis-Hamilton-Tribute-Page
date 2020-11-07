@@ -5,4 +5,4 @@ It makes up the first part of my freeCodeCamp Responsive Web Design projects and
 See this project live at the following URL:
 https://shakexsempe.github.io/lewis-hamilton-tribute-page/
 
-Enjoy!
+Please Enjoy!
