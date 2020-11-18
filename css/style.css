@@ -298,11 +298,18 @@ ol {
     border-bottom-right-radius: 0px;
   }
   .mySlides {
-    height: 20vh;
+    height: 35vh;
     width: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0px;
   }
+  #slides {
+    padding: 10px;
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
   #img-caption {
     margin: 15px 0 5px 0;
     color: rgb(168, 208, 253);
