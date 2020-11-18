@@ -49,14 +49,17 @@ span {
 /*end of header*/
 
 /*image*/
-#image {
+.mySlides {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 450px;
   margin: 0 auto;
   border-radius: 10px;
 }
-
+#img-div button{
+  margin: 10px 60px;
+  width: 10%;
+}
 #img-div {
   background: linear-gradient(90deg, #000, #cccbcb, #333);
   padding: 10px;
@@ -226,6 +229,20 @@ ol {
   }
   #title {
     font-size: 3rem;
+  }
+  .mySlides {
+    height: 20vh;
+  }
+  #img-div {
+    background: linear-gradient(90deg, #000, #cccbcb, #333);
+    padding: 10px;
+    margin: 0;
+    border-radius: 15px;
+
+  }
+  #img-div button{
+    margin: 10px 20px;
+    width: 60px;
   }
   #img-caption{
     font-size: 1rem;

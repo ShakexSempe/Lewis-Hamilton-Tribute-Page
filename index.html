@@ -18,9 +18,16 @@
 
 <!--Image-->
         <figure id="img-div">
-            <img id="image" src="images/Category_Banner_1400x500px_Mercedes_Hamilton_Black_Livery.jpg"
-                alt="lewis-hamilton">
-            <figcaption id="img-caption">Lewis Hamilton, Driver #44</figcaption>
+                <img class="mySlides" src="images/Category_Banner_1400x500px_Mercedes_Hamilton_Black_Livery.jpg">
+                <img class="mySlides" src="images/2020-10-25T153650Z_1270409731_UP1EGAP17DEE3_RTRMADP_3_MOTOR-F1-PORTUGAL.jpg">
+                <img class="mySlides" src="images/_114824956_blm (1).png">
+                <img class="mySlides" src="images/Em3K5cAWMAMSy3Z.jpg">  
+              
+            <figcaption id="img-caption">7x World Champion</figcaption>
+            <!--w3chools Slide-show buttons -->    
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+            <!--end of w3schools Slide-show buttons -->    
         </figure>
 <!--end of Image-->
 
@@ -30,7 +37,7 @@
 
             <p class="blockquote"><a id="tribute-link" target="_blank"
                     href="https://en.wikipedia.org/wiki/Lewis_Hamilton">Lewis Carl Davidson Hamilton
-                </a>is widely regarded as one of the greatest drivers in the history of the sport, and considered by
+                </a>is widely regarded as one of the greatest drivers in the history of Formula One, and considered by
                 some (including the author of this page) to be the greatest of all time. He won his first
                 World Drivers' Championship with <a target="_blank"
                     href="https://en.wikipedia.org/wiki/McLaren">McLaren</a></strong> in 2008, before moving to the
@@ -114,8 +121,30 @@
 <!--end of link-->
 
 </main>
+<!--w3schools slideshow-->
+<script>
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+<!--end of w3schools slideshow-->
 
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </body>
 
 </html>
