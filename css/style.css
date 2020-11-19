@@ -58,26 +58,24 @@ span {
 }
 
 #slides {
-  padding: 10px;
+  padding: 0px;
   margin: 0;
   border-radius: 15px;
   margin-top: 10px;
   width: 100%;
 }
 .mySlides {
-  display: block;
-  max-width: 100%;
-  height: 400px;
+  width: 100%;
+  height: 90vh;
   margin: 0 auto;
   border-radius: 10px;
   
 }
 #slides button{
-  margin-right: 80px;
+  margin: 5px 60px;
   width: 10%;
 }
 .w3-display-right{
-  float: right;
 }
 #img-div {
   background: linear-gradient(90deg, #000, #cccbcb, #333);
@@ -100,11 +98,10 @@ span {
 /*Quote*/
 .quote {
   font-size: 1.8rem;
-  padding: 40px;
+  padding: 60px;
   color: #000;
-  max-width: 70vw;
-  margin: 0 auto 50px auto;
-  text-align: left;
+  margin: 0 ;
+  text-align: center;
 }
 .quote a {
   text-decoration: none;
@@ -183,7 +180,7 @@ ol {
 /*end of section*/
 
 #link {
-  text-align: center;
+  font-size: 2.5rem;
 }
 
 /*Media queries*/
@@ -192,7 +189,7 @@ ol {
     margin-top: 40px;
   }
 .mySlides {
-  height: 342px;
+  height: 640px;
 }
   #img-caption {
     font-size: 1.2rem;
@@ -234,6 +231,10 @@ ol {
 
   .quote h3 {
     padding-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  #link{
     font-size: 2rem;
     text-align: center;
   }
@@ -286,7 +287,7 @@ ol {
   
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 415px){
   #main {
     margin: 5px;
     padding: 10px;
@@ -304,17 +305,17 @@ ol {
     border-bottom-right-radius: 0px;
   }
   #slides {
-    padding: 10px;
-    margin: 0;
-    margin-top: 10px;
+    padding: 0px;
+    margin-top: 0px;
     width: 100%;
   }
   
   #img-caption {
-    margin: 15px 0 5px 0;
+    margin: 5px 0 10px 0;
     color: rgb(168, 208, 253);
     width: 100%;
     background: linear-gradient(90deg, #333, rgb(63, 62, 62), #000);
+    border-bottom-left-radius: 0px;
   }
   #slides button{
     margin: 10px 20px;
@@ -325,6 +326,12 @@ ol {
     padding: 20px;
     max-width: 100%;
     text-align: left;
+  }
+  #link {
+    font-size: 1.5rem;
+  }
+  #tribute-info li{
+    margin: 0;
   }
 }
 /*end of media queries*/
