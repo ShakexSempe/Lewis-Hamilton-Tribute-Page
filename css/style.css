@@ -145,7 +145,7 @@ span {
 }
 
 #tribute-info li {
-  margin: 10px 0;
+  margin: 30px 0;
   max-width: 80vw;
   text-align: left;
   line-height: 2.9;
@@ -331,7 +331,7 @@ ol {
     font-size: 1.5rem;
   }
   #tribute-info li{
-    margin: 0;
+    margin: 10px;
   }
 }
 /*end of media queries*/
