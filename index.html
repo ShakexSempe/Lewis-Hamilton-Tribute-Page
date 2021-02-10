@@ -6,14 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Tribute Page- Lewis Hamilton</title>
+    <link id="theme-style" rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
 <!--header-->
     <main id='main'>
-        <h1 id='title'>Lewis Hamilton</h1>
-        <p id="six"> The benchmark of Speed</p>
-
+        <header>
+            <h1 id='title'>Lewis Hamilton</h1>
+            <p id="six"> The benchmark of Speed</p>
+            <!--Theme changer-->
+            <div id="theme-options-wrapper">
+                <div data-mode="light" id="light-mode" class="theme-dot">Light</div>
+                <div data-mode="dark" id="dark-mode" class="theme-dot">Dark</div>
+            </div>
+            <p id="settings-note">
+                *choose a color theme
+            </p>
+            <!--end of Theme changer-->
+        </header>
 <!--end of header-->
 <!--Image-->
 <figure id="img-div">
@@ -160,7 +171,7 @@ function showDivs(n) {
 </script>
 <!--end of w3schools slideshow-->
 
-
+<script src="/js/theme.js"></script>
 </body>
 
 </html>
