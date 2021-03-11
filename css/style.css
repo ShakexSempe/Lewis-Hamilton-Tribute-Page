@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Blinker:wght@600&display=swap');
 
 * {
   padding: 0;
@@ -105,16 +105,16 @@ span {
 
 /*header*/
 #title {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 900;
   margin-bottom: 0;
+  font-family: 'Blinker', sans-serif;
 }
 
 #six {
   font-size: 2rem;
   margin-bottom: 30px;
   color: var(--headText);
-  text-transform: capitalize;
 }
 
 /*end of header*/
@@ -334,7 +334,7 @@ footer span{
     border-radius: 5px;
   }
   #title {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   .mySlides {
     height: 40vh;
@@ -380,7 +380,7 @@ footer span{
     border-radius: 0px;
   }
   #title{
-    font-size: 3.7rem;
+    font-size: 4.85rem;
   }
   #settings-note{
     font-size: .6em;
