@@ -26,3 +26,8 @@ function setTheme(mode){
     
     localStorage.setItem('theme', mode)
 }
+
+
+/*Date*/
+const date = document.getElementById('date');
+date.innerHTML = new Date().getFullYear();
