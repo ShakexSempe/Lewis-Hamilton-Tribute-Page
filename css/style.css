@@ -171,6 +171,8 @@ span {
   transition: .3s ease;
   transform: scale(.96);
   color: skyblue;
+  outline: none;
+  border: none;
 }
 #img-div {
   background: var(--imageDiv);
