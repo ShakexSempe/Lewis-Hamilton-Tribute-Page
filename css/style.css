@@ -167,9 +167,7 @@ span {
   box-shadow: inset 2px 2px 5px #ddd,
               inset -2px -2px 5px #000;
 }
-#slides button:hover {
 
-}
 
 #slides button:active {
   transition: .3s ease;
@@ -333,7 +331,7 @@ ol {
 }
 footer{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.7rem;
