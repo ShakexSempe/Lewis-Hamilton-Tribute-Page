@@ -162,9 +162,13 @@ span {
   width: 10%;
   border-radius: 5px;
   border: none;
+  outline: none;
   padding: .2em;
   box-shadow: inset 2px 2px 5px #ddd,
               inset -2px -2px 5px #000;
+}
+#slides button:hover {
+
 }
 
 #slides button:active {
