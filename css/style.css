@@ -143,15 +143,20 @@ span {
   border-radius: 15px;
   margin-top: 10px;
   width: 100%;
+  position: relative;
 }
 .mySlides {
   width: 50vw;
   height: 70vh;
   margin: 0 auto;
   border-radius: 10px;
-  
-  
+  padding: 1em;
+  box-shadow: inset 5px 5px 5px #ddd,
+              inset -5px -5px 5px #333a;
 }
+
+
+
 #slides button{
   margin: 5px 60px;
   width: 10%;
@@ -162,6 +167,11 @@ span {
               inset -2px -2px 5px #000;
 }
 
+#slides button:active {
+  transition: .3s ease;
+  transform: scale(.96);
+  color: skyblue;
+}
 #img-div {
   background: var(--imageDiv);
   padding: 10px;
