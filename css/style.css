@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
+  /* border: 1px solid rgba(255, 0, 0, 0.37); */
 }
 
   /*variable colors*/
@@ -15,7 +15,7 @@
 
     --headText: #333;
     --headLinks: #333;
-    
+    --figcaption: skyblue;
     --imageDiv: linear-gradient(90deg, #333, #000, #333);
     --caption: #a8d0fd;
     --sectionLinks: #333;
@@ -25,6 +25,10 @@
     --sectionP: rgb(41, 40, 40);
     --button: #fff;
 
+    --next-btn-bg: #dc143c;
+    --prev-btn-bg: #111;
+    --next-btn: #fff;
+    --prev-btn: #eee;
     
     --border: #000;
 
@@ -99,8 +103,8 @@ header{
   color: var(--sectionText);
 }
 #main {
-  margin: 5px;
-  padding: 10px;
+  margin: .5em 1em;
+  padding: 2vh 0;
   background: var(--secondBody);
   border-radius: 5px;
 }
@@ -113,14 +117,14 @@ span {
 
 /*header*/
 #title {
-  font-size: 7rem;
+  font-size: 5em;
   font-weight: 900;
   margin-bottom: 0;
   font-family: 'Zen Dots', cursive;
 }
 
 #six {
-  font-size: 2rem;
+  font-size: 2.5em;
   margin-bottom: 30px;
   color: var(--headText);
   
@@ -129,9 +133,10 @@ span {
 /*end of header*/
 
 /*image*/
+
 #image {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   border-radius: 10px;
@@ -140,8 +145,7 @@ span {
 #slides {
   padding: 0px;
   margin: 0;
-  border-radius: 15px;
-  margin-top: 10px;
+  margin-top: 1em;
   width: 100%;
   position: relative;
 }
@@ -149,37 +153,60 @@ span {
   width: 50vw;
   height: 70vh;
   margin: 0 auto;
-  border-radius: 10px;
-  padding: 1em;
-  box-shadow: inset 5px 5px 5px #ddd,
-              inset -5px -5px 5px #333a;
+  /* border-radius: 10px; */
+  padding: 0;
+  /* box-shadow: inset 5px 5px 5px #ddd, */
+              /* inset -5px -5px 5px #333a; */
 }
 
 
 
 #slides button{
   margin: 5px 60px;
-  width: 10%;
+  width: 20%;
   border-radius: 5px;
   border: none;
   outline: none;
-  padding: .2em;
+  padding: 1em;
+  cursor: pointer;
+  transition: .2s;
   box-shadow: inset 2px 2px 5px #ddd,
               inset -2px -2px 5px #000;
 }
 
+#slides button.next {
+  background-color: var(--next-btn-bg);
+  color: var(--next-btn);
+}
+#slides button.previous {
+  background-color: var(--prev-btn-bg);
+  color: var(--prev-btn);
+}
+
+#slides button:hover {
+  transform: scale(.98);
+  
+}
 
 #slides button:active {
-  transition: .3s ease;
+  transition: .2s ease;
   transform: scale(.96);
   color: skyblue;
   outline: none;
   border: none;
 }
+.slides-caption {
+  background-color: #000;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em 0;
+  color: var(--figcaption);
+  font-size: 1.5em;
+}
 #img-div {
   background: var(--imageDiv);
   padding: 10px;
-  margin: 0;
+  margin: 0 5vw;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
@@ -220,7 +247,7 @@ span {
 }
 
 #img-div:hover#img-div img {
-  transition: 1s ease;
+  transition: .5s ease;
   transform: scale(1.05);
 }
 #img-div img {
@@ -242,7 +269,8 @@ span {
 /*section*/
 /*Quote*/
 .quote {
-  font-size: 1.8rem;
+  font-size: 1.5em;
+  line-height: 2;
   padding: 60px;
   color: var(--sectionText);
   margin: 0 ;
@@ -346,9 +374,7 @@ footer span{
 
 /*Media queries*/
 @media (max-width: 1024px) {
-  #title {
-    margin-top: 40px;
-  }
+  
 .mySlides {
   height: 640px;
   width: 100%;
@@ -367,26 +393,15 @@ footer span{
 
   }
 
-  #image {
-    border-radius: 10px;
-  }
 
-  #main {
-    margin: 10px 8px;
-    padding: 15px;
-    border-radius: 5px;
-  }
-
-  #title {
-    font-size: 4.5rem;
-  }
 
   .quote {
-    font-size: 1.5rem;
     padding: 40px;
-    max-width: 80vw;
-    margin: 0 auto 50px auto;
+    /* max-width: 80vw; */
+    /* margin: 0 auto 50px auto; */
+    margin: .5em auto;
     text-align: left;
+    line-height: 2;
   }
 
   .quote h3 {
@@ -402,13 +417,17 @@ footer span{
 }
 
 @media screen and (max-width: 768px) {
-  #main {
+  /* #main {
     margin: 5px;
     padding: 5px;
     border-radius: 5px;
-  }
+  } */
   #title {
-    font-size: 5rem;
+    font-size: 3em;
+  }
+
+  #six {
+    font-size: 2em;
   }
   .mySlides {
     height: 40vh;
@@ -428,10 +447,15 @@ footer span{
   .quote {
     font-size: 1.4rem;
     padding: 5px;
-    max-width: 80%;
     text-align: left;
   }
 
+  .slides-caption {
+    font-size: 1em;
+  }
+  #slides button {
+    padding: .5em;
+  }
   #tribute-info h2 {
     font-size: 1.5rem;
     padding: 5px;
@@ -448,14 +472,10 @@ footer span{
 }
 
 @media screen and (max-width: 415px){
-  #main {
-    margin: 0px;
-    padding: 5px;
-    border-radius: 0px;
-  }
-  #title{
-    font-size: 4.85rem;
-  }
+  
+  /* #title{
+    font-size: 2em;
+  } */
   #settings-note{
     font-size: .6em;
 }
@@ -471,7 +491,7 @@ footer span{
   }
   #slides {
     padding: 0px;
-    margin-top: 0px;
+    margin-top: 5vh;
     width: 100%;
   }
   
@@ -481,12 +501,12 @@ footer span{
     border-bottom-left-radius: 0px;
   }
   #slides button{
-    margin: 10px 20px;
-    width: 60px;
+    margin: 1em 2em;
+    width: 25%;
   }
   .quote {
     font-size: 1.2rem;
-    padding: 20px;
+    padding: 0 ;
     max-width: 100%;
     text-align: left;
   }
@@ -494,7 +514,8 @@ footer span{
     font-size: 1.5rem;
   }
   #tribute-info li{
-    margin: 10px;
+    margin: .5em 0;
+    background-color: #eee;
   }
 }
 /*end of media queries*/

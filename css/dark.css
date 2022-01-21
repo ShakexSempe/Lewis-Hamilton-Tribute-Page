@@ -15,7 +15,10 @@
     --sectionP: rgb(41, 40, 40);
     --button: #fff;
 
-    
+    --next-btn-bg: #dc143c;
+    --prev-btn-bg: #111;
+    --next-btn: #fff;
+    --prev-btn: #eee;
     --border: #000;
 
   }
