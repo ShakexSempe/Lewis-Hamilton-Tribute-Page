@@ -30,6 +30,7 @@
     --next-btn: #fff;
     --prev-btn: #eee;
     
+    --quote: #eee;
     --border: #000;
 
   }
@@ -320,10 +321,11 @@ span {
 }
 
 #tribute-info li {
-  margin: 30px 0;
+  margin: 30px 0; 
   max-width: 80vw;
   text-align: left;
   line-height: 2.9;
+  background-color: var(--quote);
 
 }
 
@@ -515,7 +517,6 @@ footer span{
   }
   #tribute-info li{
     margin: .5em 0;
-    background-color: #eee;
   }
 }
 /*end of media queries*/
