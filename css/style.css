@@ -591,6 +591,8 @@ footer span{
 @keyframes loader {
   0%, 100% {
     transform: translateX(-50%);
+    transition-timing-function: ease-in-out;
+
   }
   50% {
     transform: translateX(150%);
