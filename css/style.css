@@ -14,6 +14,8 @@
     --heads: #eee;
 
 
+    --tribute-info-bg: #fafafa;
+
     --headText: #333;
     --headLinks: #333;
     --figcaption: skyblue;
@@ -31,7 +33,7 @@
     --next-btn: #fff;
     --prev-btn: #eee;
     
-    --quote: #eee;
+    --quote: #fff;
     --border: #000;
 
     --border-radius-sm: .5rem;
@@ -74,8 +76,12 @@
     transform: scale(.95);
     letter-spacing: normal;
     box-shadow: 0 .125rem .25rem #0003;
-
-}
+  }
+  @media(min-width: 768px){
+    .theme-dot:hover {
+      cursor: pointer;
+    }
+  }
 #light-mode{
     background-color: #fff;
     border: .05rem solid #333;
@@ -108,12 +114,13 @@ body {
 }
 header{
   color: var(--headText);
+  padding: 5vh 5vw;
 }
 #settings-note{
   color: var(--sectionText);
 }
 #main {
-  margin: .5rem 5vw;
+  /* margin: .5rem 5vw; */
   padding: 5vh 0;
   background: var(--secondBody);
 }
@@ -152,8 +159,8 @@ span {
 }
 
 #slides {
-  padding: 0px;
-  margin: 10vh 0;
+  padding: 0 5vw;
+  margin: 10vh 0 5vh;
   border-radius: 1rem;
   width: 100%;
   position: relative;
@@ -169,7 +176,7 @@ span {
   object-fit: fill;
   margin: 0 auto;
   /* border-radius: 10px; */
-  padding: 0;
+  /* padding: 0; */
 }
 
 
@@ -219,51 +226,10 @@ span {
 }
 #img-div {
   background: var(--imageDiv);
-  padding: 0;
-  /* margin: 0 5vw; */
-  border-radius: 1rem;
-  overflow: hidden;
+  border-radius: var(--border-radius-sm);
   position: relative;
-}
-#img-div::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-  transition: 1s ease;
-  box-shadow: var(--box-shadow);
-}
-#img-div::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-  opacity: 0;
-  transition: 1s ease;
-  box-shadow: var(--box-shadow-hover);
-}
-
-#img-div:hover#img-div:before {
-  opacity: 0;
-  transition: .5s ease;
-}
-#img-div:hover#img-div:after {
-  transition: 1s ease;
-  opacity: 1;
-}
-
-#img-div:hover#img-div img {
-  transition: .5s ease;
-  transform: scale(1.05);
-}
-#img-div img {
-  transition: .5s ease;
+  /* border: 2px solid red; */
+  box-shadow: 0 .5rem 1rem #0002;
 }
 
 #img-caption {
@@ -284,7 +250,7 @@ span {
   line-height: 2;
   /* padding: 60px; */
   color: var(--sectionText);
-  margin: 0 ;
+  padding: 5vh 5vw;
   text-align: center;
   text-align: left;
 }
@@ -302,9 +268,8 @@ span {
 
 
 .quote h3 {
-  padding: 10vh 0 5vh;
   font-size: 1.5rem;
-  text-align: center;
+  margin: 1rem 0;
 }
 
 /*end of Quote*/
@@ -312,32 +277,47 @@ span {
 /*tribute info*/
 #tribute-info {
   font-size: 1rem;
+  /* border: 2px solid red; */
+  background: var(--tribute-info-bg);
+  padding: 5vh 5vw;
 }
 #tribute-info span{
   font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: .125rem;
 }
 #tribute-info h2 {
   font-size: 1.5rem;
-  padding: 5px;
+  margin-bottom: 1rem;
+  text-align: left;
 }
-
-#tribute-info h2 {
-  margin-top: 50px;
-  text-align: center;
+@media (min-width: 768px) {
+  #tribute-info h2 {
+    text-align: center;
+  }
 }
 
 #tribute-info ol {
-  margin: 0 auto 50px auto;
+  /* margin: 0 auto 50px auto; */
+  padding-left: .5rem;
 }
 
 #tribute-info li {
-  margin: 30px 0;
-  padding: 5px;
-  border-radius: 10px; 
+  /* background-color: var(--quote); */
+  /* margin: 30px 0; */
+  padding: .5rem;
+  padding-bottom: 1rem;
+  /* border-radius: var(--border-radius-sm);  */
   text-align: left;
   line-height: 2.9;
-  background-color: var(--quote);
-
+  /* border: 2px solid red; */
+  border-bottom: 2px solid #0003;
+}
+@media(min-width: 820px){
+  #tribute-info li {
+    width: 60%;
+    font-size: 1.25rem;
+  }
 }
 
 #tribute-info a {
@@ -357,11 +337,9 @@ ol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 5vh;
 }
 
-#tribute-info li {
-  line-height: 2.5;
-}
 
 /*end of tribute info*/
 
@@ -409,12 +387,6 @@ footer a{
     height: 40vh;
     width: 100%;
   }
-  #img-div {
-    padding: 0;
-    margin: 0;
-    border-radius: 15px;
-
-  }
   
   #img-caption{
     margin: 0px;
@@ -422,9 +394,6 @@ footer a{
   }
   .quote h3 {
     font-size: 1.15rem;
-    text-align: left;
-    margin: 0;
-    padding: 10vh 0 .5rem;
   }
   .quote {
     font-size: 1rem;
@@ -441,16 +410,8 @@ footer a{
   }
 
   #tribute-info {
-    padding-left: .5rem;
+    /* border: 2px solid red; */
   } 
-  #tribute-info h2 {
-    font-size: 1.25rem;
-    padding: 5px;
-  }
-
-  #tribute-info span {
-    font-size: 1.05rem;
-  }
 
   #tribute-info li {
     font-size: 1rem;
@@ -480,8 +441,7 @@ footer a{
     border-bottom-right-radius: 0px;
   }
   #slides {
-    padding: 0px;
-    margin-top: 5vh;
+    padding: 0px 5vw;
     width: 100%;
   }
   
@@ -493,12 +453,6 @@ footer a{
   #slides button{
     margin: 1em 2em;
     width: 25%;
-  }
-  .quote {
-    font-size: .9rem;
-    padding: 0 ;
-    max-width: 100%;
-    text-align: left;
   }
   #tribute-info li{
     margin: .5em 0;
