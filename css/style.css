@@ -270,8 +270,8 @@ span {
 }
 
 .quote h2 {
-  font-size: 1.25rem;
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
   margin-bottom: 1.5rem;
 }
 
@@ -376,12 +376,13 @@ ol {
 /*end of section*/
 
 #link {
-  padding: 1rem 5vw;
-  font-size: 1.5rem;
+  padding: 5vh 5vw 1rem;
+  font-size: 1.025rem;
+  font-size: clamp(1.025rem, 1.5vw, 1.5rem);
   /* text-align: left; */
   /* text-align: center; */
   /* margin: 5vh auto; */
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 footer{
   /* display: flex;
@@ -389,6 +390,8 @@ footer{
   justify-content: center;
   align-items: center; */
   font-size: 1rem;
+  font-size: 1.025rem;
+  font-size: clamp(1.025rem, 1.5vw, 1.5rem);
 }
 footer p{
   text-transform: capitalize;
@@ -423,10 +426,6 @@ footer a{
 
   #tribute-info li {
     font-size: 1rem;
-  }
-  #link {
-    font-size: 1rem;
-    /* text-align: left; */
   }
 }
 
