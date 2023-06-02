@@ -185,7 +185,8 @@ span {
 #img-caption {
   /* border: 2px solid red; */
   text-align: center;
-  font-size: .85rem;
+  font-size: .65rem;
+  font-size: clamp(.65rem, 1vw, 1rem);
   padding: .5rem;
   color: var(--caption);
   background: var(--imageDiv);
