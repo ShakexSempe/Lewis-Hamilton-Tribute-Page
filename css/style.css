@@ -272,7 +272,7 @@ span {
 .quote h2 {
   font-size: 1.125rem;
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .quote p {
