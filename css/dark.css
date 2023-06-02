@@ -8,11 +8,11 @@
     --headText: #eee;
     --headLinks: #333;
     
-    --imageDiv: linear-gradient(90deg, #5e5d5d, #333, #5e5d5d);
-    --caption: #ddd;
+    --imageDiv: #000;
+    --caption: hsl(0, 0%, 80%);
     --sectionLinks: #000;
     --sectionText: rgb(221, 219, 219);
-    --link:  #dc143c ;
+    --link:  skyblue ;
     --linkHov: #a52a2a ;
     --sectionP: rgb(41, 40, 40);
     --button: #fff;

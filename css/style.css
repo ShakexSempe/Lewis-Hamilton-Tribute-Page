@@ -19,8 +19,8 @@
     --headText: #333;
     --headLinks: #333;
     --figcaption: skyblue;
-    --imageDiv: linear-gradient(90deg, #333, #000, #333);
-    --caption: #a8d0fd;
+    --imageDiv: linear-gradient(90deg, #000, #111, #000);
+    --caption: hsl(0, 0%, 80%);
     --sectionLinks: #333;
     --sectionText: #000;
     --link: #dc143c;
@@ -47,7 +47,7 @@
                         0rem .2rem .25rem rgba(0, 0, 0, .2);
 
   }
-  /*end of variable colors*/
+
 /*themes option*/
   #theme-options-wrapper{
     display: flex;
@@ -92,20 +92,32 @@
     color: #eee;
     
 }
-
-#settings-note{
-    font-size: .8rem;
-    font-style: italic;
-    text-align: center;
-    color: var(--sectionP);
-    margin: .5rem auto 1rem;
+#settings-note {
+  font-size: .65rem;
+  font-size: clamp(.65rem, 1vw, .85rem);
+  font-style: italic;
+  text-align: center;
+  color: var(--sectionP);
+  margin: .5rem auto 1rem;
 }
 /*end of theme options*/
 
 html {
   font-family: 'Montserrat', sans-serif;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 
+a {
+  text-decoration: none;
+  color: var(--link);
+  transition: .2s;
+}
+a:hover {
+  color: var(--linkHov);
+}
 /*main*/
 body {
   text-align: center;
@@ -126,22 +138,24 @@ header{
 }
 
 span {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /*end of main*/
 
 /*header*/
 #title {
-  font-size: 3.5rem;
-  font-weight: 900;
-  margin-bottom: 0;
   font-family: 'Zen Dots', cursive;
+  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  margin-bottom: .5rem;
 }
 
-#six {
-  font-size: 2rem;
-  margin-bottom: 30px;
+#sub-title {
+  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 1rem;
   color: var(--headText);
   
 }
@@ -150,14 +164,28 @@ span {
 
 /*image*/
 
-#image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  border-radius: var(--border-radius-sm);
-}
 
+#img-div {
+  /* border: 2px solid red; */
+  margin-top: 5vh;
+  background: var(--imageDiv);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 .5rem 1rem #0003;
+}
+#img-div img {
+  /* border: 2px solid blue; */
+}
+#img-caption {
+  /* border: 2px solid red; */
+  text-align: center;
+  font-size: .85rem;
+  padding: .5rem;
+  color: var(--caption);
+  background: var(--imageDiv);
+
+}
 #slides {
   padding: 0 5vw;
   margin: 10vh 0 5vh;
@@ -224,53 +252,46 @@ span {
   color: var(--figcaption);
   font-size: 1rem;
 }
-#img-div {
-  background: var(--imageDiv);
-  border-radius: var(--border-radius-sm);
-  position: relative;
-  /* border: 2px solid red; */
-  box-shadow: 0 .5rem 1rem #0002;
-}
 
-#img-caption {
-  font-size: 1rem;
-  margin: 15px 0 5px 0;
-  color: var(--caption);
-  background: var(--imageDiv);
-  text-align: center;
-  z-index: 10;
-}
-
-/*end of image*/
 
 
 /*section*/
 /*Quote*/
 .quote {
-  line-height: 2;
-  /* padding: 60px; */
   color: var(--sectionText);
   padding: 5vh 5vw;
-  text-align: center;
   text-align: left;
-}
-.quote a {
-  text-decoration: none;
-  color: var(--link);
-  transition: .2s;
+  /* border: 2px solid red; */
 }
 
-.quote a:hover {
-  color: var(--linkHov);
-  text-decoration: underline;
+.quote h2 {
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  margin-bottom: 1.5rem;
 }
 
-
-
-.quote h3 {
-  font-size: 1.5rem;
+.quote p {
   margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
 }
+
+.quote ul {
+  /* border: 2px solid red; */
+  line-height: 2;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+}
+.quote ul li::first-letter {
+  text-transform: capitalize;
+} 
+
+
+
+
+
 
 /*end of Quote*/
 
@@ -371,34 +392,10 @@ footer a{
 
 
 @media screen and (max-width: 768px) {
-  /* #main {
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
-  } */
-  #title {
-    font-size: 2rem;
-  }
-
-  #six {
-    font-size: 1.25rem;
-  }
+  
   .mySlides {
     height: 40vh;
     width: 100%;
-  }
-  
-  #img-caption{
-    margin: 0px;
-    font-size: .7rem;
-  }
-  .quote h3 {
-    font-size: 1.15rem;
-  }
-  .quote {
-    font-size: 1rem;
-    line-height: 2;
-    text-align: left;
   }
 
   .slides-caption {
@@ -424,16 +421,6 @@ footer a{
 
 @media screen and (max-width: 415px){
   
-  /* #title{
-    font-size: 2em;
-  } */
-  #settings-note{
-    font-size: .6em;
-}
-  #image{
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0px;
-  }
   .mySlides {
     height: 35vh;
     width: 100%;
@@ -443,12 +430,6 @@ footer a{
   #slides {
     padding: 0px 5vw;
     width: 100%;
-  }
-  
-  #img-caption {
-    margin: 5px 0 10px 0;
-    width: 100%;
-    border-bottom-left-radius: 0px;
   }
   #slides button{
     margin: 1em 2em;
