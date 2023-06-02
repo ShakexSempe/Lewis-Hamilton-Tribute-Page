@@ -119,6 +119,10 @@ a {
 a:hover {
   color: var(--linkHov);
 }
+
+p {
+  line-height: 1.6;
+}
 /*main*/
 body {
   text-align: center;
@@ -305,8 +309,9 @@ span {
 }
 #tribute-info span{
   font-weight: 700;
+  padding-left: .5rem;
   font-size: 1.25rem;
-  letter-spacing: .125rem;
+  /* letter-spacing: .125rem; */
   color: var(--list-title);
 }
 #tribute-info h2 {
@@ -322,20 +327,21 @@ span {
 
 #tribute-info ol {
   /* margin: 0 auto 50px auto; */
-  padding-left: 1rem;
+  /* padding-left: 5vw; */
   /* border: 2px solid red; */
 }
 
 #tribute-info li {
   /* background-color: var(--quote); */
   /* margin: 30px 0; */
-  /* padding: .25rem; */
+  /* padding-left: 1rem; */
   padding-bottom: 1rem;
   /* border-radius: var(--border-radius-sm);  */
   text-align: left;
   line-height: 1.8;
+  list-style: none;
   /* border: 2px solid red; */
-  border-bottom: 2px solid #0003;
+  border-bottom: 2px solid #000;
 }
 @media(min-width: 820px){
   #tribute-info li {
@@ -370,20 +376,22 @@ ol {
 /*end of section*/
 
 #link {
+  padding: 1rem 5vw;
   font-size: 1.5rem;
-  text-align: center;
-  margin: 5vh auto;
+  /* text-align: left; */
+  /* text-align: center; */
+  /* margin: 5vh auto; */
+  border: 2px solid red;
 }
 footer{
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-size: 1.1rem;
+  align-items: center; */
+  font-size: 1rem;
 }
 footer p{
   text-transform: capitalize;
-  margin: 0 10px;
 
 }
 footer a{
