@@ -18,6 +18,7 @@
 
     --headText: #333;
     --headLinks: #333;
+    --list-title: #dc143c;
     --figcaption: skyblue;
     --imageDiv: linear-gradient(90deg, #000, #111, #000);
     --caption: hsl(0, 0%, 80%);
@@ -304,8 +305,9 @@ span {
 }
 #tribute-info span{
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   letter-spacing: .125rem;
+  color: var(--list-title);
 }
 #tribute-info h2 {
   font-size: 1.5rem;
@@ -320,17 +322,18 @@ span {
 
 #tribute-info ol {
   /* margin: 0 auto 50px auto; */
-  padding-left: .5rem;
+  padding-left: 1rem;
+  /* border: 2px solid red; */
 }
 
 #tribute-info li {
   /* background-color: var(--quote); */
   /* margin: 30px 0; */
-  padding: .5rem;
+  /* padding: .25rem; */
   padding-bottom: 1rem;
   /* border-radius: var(--border-radius-sm);  */
   text-align: left;
-  line-height: 2.9;
+  line-height: 1.8;
   /* border: 2px solid red; */
   border-bottom: 2px solid #0003;
 }
