@@ -10,29 +10,31 @@
 </head>
 
 <body>
+    <!--Theme changer-->
+    <div id="theme-options-wrapper">
+        <div data-mode="light" id="light-mode" class="theme-dot">Light</div>
+        <div data-mode="dark" id="dark-mode" class="theme-dot">Dark</div>
+    </div>
     <main id='main'>
         <header>
             <h1 id='title'>Lewis Hamilton</h1>
             <p id="sub-title"> The Benchmark of Speed</p>
-            <!--Theme changer-->
-            <div id="theme-options-wrapper">
-                <div data-mode="light" id="light-mode" class="theme-dot">Light</div>
-                <div data-mode="dark" id="dark-mode" class="theme-dot">Dark</div>
-            </div>
-            <p id="settings-note">
-                *choose a color theme
-            </p>
-            <!--end of Theme changer-->
-            <figure id="img-div">
-                <img id="image" src="images/Category_Banner_1400x500px_Mercedes_Hamilton_Black_Livery.jpg"
+            <picture id="img-div">
+                <source
+                type="image/webp"
+                srcset="images/hero.webp"
+                media="(max-width: 500px)"
+                height="388"
+                width="380"
+                >
+                <img id="image" src="images/lewis-hamilton.jpg" width="1536" height="846"
                     alt="lewis-hamilton">
+            </picture>
+            <!--end of Theme changer-->
+            <!-- <figure id="img-div">
                 <figcaption id="img-caption">7x World Champion</figcaption>
-            </figure>
+            </figure> -->
         </header>
-        <!--end of header-->
-        <!--Image-->
-        <!--end of Image-->
-
         
         <!--quote-->
         <section class="quote">

@@ -1,5 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Zen+Dots&display=swap');
 
+/* VARIABLES */
+:root {
+  --mainBody: #eee;
+  --secondBody: #f4f4f4;
+  --heads: #eee;
+
+  --hero-bg: hsl(0, 0%, 27%);
+  --tribute-info-bg: #fafafa;
+
+  --headText: #333;
+  --headLinks: #333;
+  --list-title: #dc143c;
+  --figcaption: skyblue;
+  --imageDiv: linear-gradient(90deg, #000, #111, #000);
+  --caption: hsl(0, 0%, 80%);
+  --sectionLinks: #333;
+  --sectionText: #000;
+  --link: #dc143c;
+  --linkHov: #a52a2a;
+  --sectionP: rgb(41, 40, 40);
+  --button: #fff;
+
+  --next-btn-bg: skyblue;
+  --prev-btn-bg: #111;
+  --next-btn: #fff;
+  --prev-btn: #eee;
+  
+  --quote: #fff;
+  --border: #000;
+
+  --border-radius-sm: .5rem;
+
+  --box-shadow: inset .125rem .125rem .225rem rgba(255, 255, 255, .2),
+                inset -.125rem -.125rem .25rem rgba(0,0,0, .15),
+                .15rem .25rem .5rem rgba(0, 0, 0, .15) ;
+
+  --box-shadow-hover: inset 0rem .1rem .25rem rgba(0, 0, 0 , .15),
+                      inset -.25rem -.25rem .25rem rgba(255, 255, 255, .15),
+                      0rem .2rem .25rem rgba(0, 0, 0, .2);
+
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,55 +49,24 @@
   /* border: 1px solid rgba(255, 0, 0, 0.37); */
 }
 
-  /*variable colors*/
-  :root {
-    --mainBody: #eee;
-    --secondBody: #f4f4f4;
-    --heads: #eee;
-
-
-    --tribute-info-bg: #fafafa;
-
-    --headText: #333;
-    --headLinks: #333;
-    --list-title: #dc143c;
-    --figcaption: skyblue;
-    --imageDiv: linear-gradient(90deg, #000, #111, #000);
-    --caption: hsl(0, 0%, 80%);
-    --sectionLinks: #333;
-    --sectionText: #000;
-    --link: #dc143c;
-    --linkHov: #a52a2a;
-    --sectionP: rgb(41, 40, 40);
-    --button: #fff;
-
-    --next-btn-bg: skyblue;
-    --prev-btn-bg: #111;
-    --next-btn: #fff;
-    --prev-btn: #eee;
-    
-    --quote: #fff;
-    --border: #000;
-
-    --border-radius-sm: .5rem;
-
-    --box-shadow: inset .125rem .125rem .225rem rgba(255, 255, 255, .2),
-                  inset -.125rem -.125rem .25rem rgba(0,0,0, .15),
-                  .15rem .25rem .5rem rgba(0, 0, 0, .15) ;
-
-    --box-shadow-hover: inset 0rem .1rem .25rem rgba(0, 0, 0 , .15),
-                        inset -.25rem -.25rem .25rem rgba(255, 255, 255, .15),
-                        0rem .2rem .25rem rgba(0, 0, 0, .2);
-
-  }
+body {
+  max-width: 100%;
+  position: relative;
+}
 
 /*themes option*/
   #theme-options-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     gap: 1.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .5rem;
+    z-index: 10;
+    background-color: var(--secondBody);
 }
 .theme-dot{
     height: auto;
@@ -129,16 +140,12 @@ body {
   color: var(--sectionText);
   background-color: var(--secondBody);
 }
-header{
-  color: var(--headText);
-  padding: 5vh 5vw;
-}
+
 #settings-note{
   color: var(--sectionText);
 }
 #main {
-  /* margin: .5rem 5vw; */
-  padding: 5vh 0;
+  padding: 0 0 5vh;
   background: var(--secondBody);
 }
 
@@ -146,15 +153,26 @@ span {
   font-weight: 500;
 }
 
-/*end of main*/
-
+/* HEADER = HERO  */
+header{
+  color: var(--headText);
+  padding: 5vh 5vw;
+  /* border: 2px solid red; */
+  position: relative;
+  isolation: isolate;
+  height: 90vh;
+}
 /*header*/
 #title {
   font-family: 'Zen Dots', cursive;
   font-size: 2rem;
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-weight: 500;
   margin-bottom: .5rem;
+  color: #fff;
+  text-align: left;
+  margin-top: 5vh;
+  /* width: 50%; */
 }
 
 #sub-title {
@@ -162,7 +180,8 @@ span {
   font-size: clamp(1rem, 2vw, 1.5rem);
   margin-bottom: 1rem;
   color: var(--headText);
-  
+  text-align: left;
+  color: #fff;
 }
 
 /*end of header*/
@@ -171,19 +190,29 @@ span {
 
 
 #img-div {
-  /* border: 2px solid red; */
-  margin-top: 5vh;
-  background: var(--imageDiv);
-  border-radius: var(--border-radius-sm);
-  overflow: hidden;
+  background: var(--hero-bg);
   position: relative;
   box-shadow: 0 .5rem 1rem #0003;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
+/* IMAGE = 60% ON WIDER SCREENS */
 #img-div img {
   /* border: 2px solid blue; */
+  right: 0;
+  position: absolute;
+  height: 100%;
+  width: 60%;
+  object-fit: cover;
 }
+
 #img-caption {
-  /* border: 2px solid red; */
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
   font-size: .65rem;
   font-size: clamp(.65rem, 1vw, 1rem);
@@ -241,6 +270,8 @@ span {
   /* transform: scale(.98); */
   box-shadow: var(--box-shadow-hover);
 }
+
+
 @media (max-width: 768px){
   #slides button:active {
     transform: scale(.98);
@@ -407,7 +438,16 @@ footer a{
 
 
 @media screen and (max-width: 768px) {
-  
+  #img-div {
+    /* border: 2px solid red; */
+  }
+  #img-div img {
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 20%;
+  }
   .mySlides {
     height: 40vh;
     width: 100%;
