@@ -171,7 +171,7 @@ header{
   margin-bottom: .5rem;
   color: #fff;
   text-align: left;
-  margin-top: 5vh;
+  margin-top: 15vh;
   /* width: 50%; */
 }
 
@@ -446,8 +446,13 @@ footer a{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 20%;
+    object-position: 15%;
   }
+
+  #title {
+    margin-top: 5vh;
+  }
+
   .mySlides {
     height: 40vh;
     width: 100%;
