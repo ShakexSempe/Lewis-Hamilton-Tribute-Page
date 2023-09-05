@@ -167,7 +167,7 @@ header{
 #title {
   font-family: 'Zen Dots', cursive;
   font-size: 2rem;
-  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-size: clamp(2.25rem, 5vw, 3rem);
   font-weight: 500;
   margin-bottom: .5rem;
   color: var(--hero-text);
