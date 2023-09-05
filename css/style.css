@@ -173,7 +173,7 @@ header{
   color: var(--hero-text);
   text-align: left;
   margin-top: 15vh;
-  width: 50%;
+  width: 40%;
 }
 
 #sub-title {
@@ -430,7 +430,7 @@ footer a{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 15%;
+    object-position: 10%;
   }
 
   #title {
