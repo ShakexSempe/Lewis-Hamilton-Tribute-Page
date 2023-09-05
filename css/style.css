@@ -6,7 +6,7 @@
   --secondBody: #f4f4f4;
   --heads: #eee;
 
-  --hero-bg: hsl(0, 0%, 27%);
+  --hero-bg: hsl(0, 0%, 17%);
   --tribute-info-bg: #fafafa;
 
   --headText: #333;
@@ -172,7 +172,7 @@ header{
   color: #fff;
   text-align: left;
   margin-top: 15vh;
-  /* width: 50%; */
+  width: 50%;
 }
 
 #sub-title {
