@@ -9,6 +9,8 @@
   --hero-bg: hsl(0, 0%, 17%);
   --tribute-info-bg: #fafafa;
 
+  --hero-text: #fafafa;
+  --hero-text-light: #f4f4f4;
   --headText: #333;
   --headLinks: #333;
   --list-title: #dc143c;
@@ -19,7 +21,7 @@
   --sectionText: #000;
   --link: #dc143c;
   --linkHov: #a52a2a;
-  --sectionP: rgb(41, 40, 40);
+  --sectionP: #333;
   --button: #fff;
 
   --next-btn-bg: skyblue;
@@ -133,6 +135,7 @@ a:hover {
 
 p {
   line-height: 1.6;
+  color: var(--sectionP);
 }
 /*main*/
 body {
@@ -149,9 +152,6 @@ body {
   background: var(--secondBody);
 }
 
-span {
-  font-weight: 500;
-}
 
 /* HEADER = HERO  */
 header{
@@ -161,6 +161,7 @@ header{
   position: relative;
   isolation: isolate;
   height: 90vh;
+  margin-bottom: 5vh;
 }
 /*header*/
 #title {
@@ -169,7 +170,7 @@ header{
   font-size: clamp(2.5rem, 5vw, 3rem);
   font-weight: 500;
   margin-bottom: .5rem;
-  color: #fff;
+  color: var(--hero-text);
   text-align: left;
   margin-top: 15vh;
   width: 50%;
@@ -181,13 +182,8 @@ header{
   margin-bottom: 1rem;
   color: var(--headText);
   text-align: left;
-  color: #fff;
+  color: var(--hero-text);
 }
-
-/*end of header*/
-
-/*image*/
-
 
 #img-div {
   background: var(--hero-bg);
@@ -221,6 +217,8 @@ header{
   background: var(--imageDiv);
 
 }
+
+
 #slides {
   padding: 0 5vw;
   margin: 10vh 0 5vh;
@@ -295,7 +293,7 @@ header{
 /*section*/
 /*Quote*/
 .quote {
-  color: var(--sectionText);
+  color: var(--sectionP);
   padding: 5vh 5vw;
   text-align: left;
   /* border: 2px solid red; */
@@ -326,23 +324,16 @@ header{
 } 
 
 
-
-
-
-
-/*end of Quote*/
-
-/*tribute info*/
+/* TRIBUTE-INFO = TITLE WINS*/
 #tribute-info {
-  font-size: 1rem;
-  /* border: 2px solid red; */
   background: var(--tribute-info-bg);
-  padding: 5vh 5vw;
+  padding: 10vh 5vw;
 }
 #tribute-info span{
   font-weight: 700;
   padding-left: .5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   /* letter-spacing: .125rem; */
   color: var(--list-title);
 }
@@ -364,22 +355,15 @@ header{
 }
 
 #tribute-info li {
-  /* background-color: var(--quote); */
-  /* margin: 30px 0; */
-  /* padding-left: 1rem; */
   padding-bottom: 1rem;
-  /* border-radius: var(--border-radius-sm);  */
+  width: 100%;
   text-align: left;
   line-height: 1.8;
   list-style: none;
-  /* border: 2px solid red; */
+  color: var(--sectionP);
+  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   border-bottom: 2px solid #000;
-}
-@media(min-width: 820px){
-  #tribute-info li {
-    width: 60%;
-    font-size: 1.25rem;
-  }
 }
 
 #tribute-info a {
@@ -464,14 +448,6 @@ footer a{
   }
   #slides button {
     padding: .5em;
-  }
-
-  #tribute-info {
-    /* border: 2px solid red; */
-  } 
-
-  #tribute-info li {
-    font-size: 1rem;
   }
 }
 
