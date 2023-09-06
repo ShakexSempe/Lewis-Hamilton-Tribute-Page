@@ -10,10 +10,12 @@
 
   --icon: hsl(0, 0%, 17%);
 
-  --hero-bg: hsl(0, 0%, 17%);
+  --hero-bg: hsl(0, 0%, 10%);
+  --hero-bg: #eee;
   --tribute-info-bg: #fafafa;
 
-  --hero-text: #fafafa;
+  --hero-text: hsl(0, 0%, 17%);
+  --hero-text-btn: #eee;
   --hero-text-light: #f4f4f4;
   --headText: #333;
   --headLinks: #333;
@@ -147,7 +149,7 @@ header a {
   border-radius: var(--border-radius-sm);
   cursor: pointer;
   text-transform: capitalize;
-  color: var(--hero-text);
+  color: var(--hero-text-btn);
 }
 
 header a i {
@@ -163,7 +165,6 @@ header a:active {
   font-size: 1rem;
   font-size: clamp(1rem, 2vw, 1.5rem);
   margin-bottom: 1rem;
-  color: var(--headText);
   text-align: left;
   color: var(--hero-text);
 }
