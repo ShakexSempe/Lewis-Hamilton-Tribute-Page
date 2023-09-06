@@ -143,8 +143,13 @@ header a {
   width: 10rem;
   text-align: left;
   border-radius: var(--border-radius-sm);
-  cursor: default;
+  cursor: pointer;
   text-transform: capitalize;
+  color: var(--hero-text);
+}
+
+header a i {
+  color: var(--link);
 }
 
 header a:active {
@@ -389,8 +394,8 @@ footer a{
 
 
 @media screen and (max-width: 768px) {
-  #img-div {
-    /* border: 2px solid red; */
+  header a {
+    cursor: default;
   }
   #img-div img {
     /* border: 2px solid blue; */
