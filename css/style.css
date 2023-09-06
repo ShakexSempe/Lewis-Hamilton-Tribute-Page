@@ -61,8 +61,8 @@ html {
 
 body {
   max-width: 100%;
-  position: relative;
   text-align: center;
+  position: relative;
   color: var(--sectionText);
   background-color: var(--secondBody);
 }
@@ -96,7 +96,7 @@ nav {
   padding: .2rem 5vw;
   z-index: 10;
   background: var(--secondBody);
-  box-shadow: 0 .125rem .5rem #0002;
+  box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 nav i {
@@ -106,6 +106,7 @@ nav i {
 #main {
   padding: 0 0 5vh;
   background: var(--secondBody);
+  scroll-margin-top: 10vh;
 }
 
 
@@ -132,6 +133,25 @@ header{
   width: 40%;
 }
 
+header a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #000, #111);
+  padding: .5rem 1rem;
+  font-weight: 500;
+  width: 10rem;
+  text-align: left;
+  border-radius: var(--border-radius-sm);
+  cursor: default;
+  text-transform: capitalize;
+}
+
+header a:active {
+  transform: scale(.98);
+  transition: .125s;
+}
+
 #sub-title {
   font-size: 1rem;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -144,7 +164,6 @@ header{
 #img-div {
   background: var(--hero-bg);
   position: relative;
-  box-shadow: 0 .5rem 1rem #0003;
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -181,6 +200,7 @@ header{
   border-radius: 1rem;
   width: 100%;
   position: relative;
+  text-align: center;
 }
 .mySlides {
   border-top: 2px solid #333;
@@ -348,22 +368,13 @@ ol {
 /*end of section*/
 
 #link {
-  padding: 5vh 5vw 1rem;
-  font-size: 1.025rem;
-  font-size: clamp(1.025rem, 1.5vw, 1.5rem);
-  /* text-align: left; */
-  /* text-align: center; */
-  /* margin: 5vh auto; */
-  /* border: 2px solid red; */
+  align-items: center;
+  padding: 1rem 5vw;
+  font-size: 1rem;
 }
 footer{
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   font-size: 1rem;
-  font-size: 1.025rem;
-  font-size: clamp(1.025rem, 1.5vw, 1.5rem);
+  align-items: center;
 }
 footer p{
   text-transform: capitalize;
