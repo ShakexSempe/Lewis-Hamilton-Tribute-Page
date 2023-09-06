@@ -1,34 +1,36 @@
 :root {
-    --mainBody: #000;
-    --secondBody: #333336;
-    --heads: #eee;
+  --mainBody: hsl(0, 0%, 27%);
+  --secondBody: #333336;
+  --heads: #eee;
+
+  --icon: hsl(0, 0%, 93%);
 
   --hero-text: #eee;
   --hero-text-light: #f4f4f4;
 
   --hero-bg: hsl(0, 0%, 27%);
-    --tribute-info-bg: #111;
+  --tribute-info-bg: #111;
 
-    --headText: #eee;
-    --headLinks: #333;
-    --list-title: skyblue;
+  --headText: #eee;
+  --headLinks: #333;
+  --list-title: skyblue;
 
-    
-    --imageDiv: #000;
-    --caption: hsl(0, 0%, 80%);
-    --sectionLinks: #000;
-    --sectionText: rgb(221, 219, 219);
-    --link:  skyblue ;
-    --linkHov: #a52a2a ;
-    --sectionP: #eee;
-    --button: #fff;
 
-    --next-btn-bg: #dc143c;
-    --prev-btn-bg: #111;
-    --next-btn: #fff;
-    --prev-btn: #eee;
-    --quote: #161616;
+  --imageDiv: #000;
+  --caption: hsl(0, 0%, 80%);
+  --sectionLinks: #000;
+  --sectionText: rgb(221, 219, 219);
+  --link: skyblue;
+  --linkHov: #a52a2a;
+  --sectionP: #eee;
+  --button: #fff;
 
-    --border: #000;
+  --next-btn-bg: #dc143c;
+  --prev-btn-bg: #111;
+  --next-btn: #fff;
+  --prev-btn: #eee;
+  --quote: #161616;
 
-  }
+  --border: #000;
+
+}
