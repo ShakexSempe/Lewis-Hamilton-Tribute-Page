@@ -246,15 +246,13 @@ header a:active {
 }
 
 #slides button:active {
-  /* transform: scale(.98); */
+  transform: scale(.98);
   box-shadow: var(--box-shadow-hover);
 }
 
 
 @media (max-width: 768px){
-  #slides button:active {
-    transform: scale(.98);
-  }
+  
   #slides button {
     cursor: default;
   }
