@@ -18,7 +18,9 @@
   --headText: #333;
   --headLinks: #333;
   --list-title: #dc143c;
-  --figcaption: skyblue;
+  --figcaption: #eee;
+  --figcaption-bg: #161616;
+
   --imageDiv: linear-gradient(90deg, #000, #111, #000);
   --caption: hsl(0, 0%, 80%);
   --sectionLinks: #333;
@@ -28,7 +30,7 @@
   --sectionP: #333;
   --button: #fff;
 
-  --next-btn-bg: skyblue;
+  --next-btn-bg: #dc143c;
   --prev-btn-bg: #111;
   --next-btn: #fff;
   --prev-btn: #eee;
@@ -208,9 +210,9 @@ header a:active {
   text-align: center;
 }
 .mySlides {
-  border-top: 2px solid #333;
-  border-right: 2px solid #333;
-  border-left: 2px solid #333;
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+  border-left: 1px solid #333;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   width: 50vw;
@@ -224,13 +226,11 @@ header a:active {
 
 
 #slides button{
-  /* margin: 5px 60px; */
   margin: 5vh 5vw;
   width: 20%;
-  border-radius: 1rem;
+  border-radius: var(--border-radius-sm);
   border: none;
-  outline: none;
-  padding: 1em;
+  padding: 1rem;
   cursor: pointer;
   transition: .25s;
   box-shadow: var(--box-shadow);
@@ -245,7 +245,7 @@ header a:active {
   color: var(--prev-btn);
 }
 
-#slides button:hover {
+#slides button:active {
   /* transform: scale(.98); */
   box-shadow: var(--box-shadow-hover);
 }
@@ -261,7 +261,7 @@ header a:active {
 }
 
 .slides-caption {
-  background-color: #000;
+  background-color: var(--figcaption-bg);
   margin: 0 auto;
   width: 50vw;
   padding: 1em 0;
@@ -329,11 +329,6 @@ header a:active {
   }
 }
 
-#tribute-info ol {
-  /* margin: 0 auto 50px auto; */
-  /* padding-left: 5vw; */
-  /* border: 2px solid red; */
-}
 
 #tribute-info li {
   padding-bottom: 1rem;
@@ -344,7 +339,7 @@ header a:active {
   color: var(--sectionP);
   font-size: 1rem;
   font-size: clamp(1rem, 2vw, 1.125rem);
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 #tribute-info a {

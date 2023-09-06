@@ -24,8 +24,10 @@
   --linkHov: #a52a2a;
   --sectionP: #eee;
   --button: #fff;
+  --figcaption: skyblue;
+  --figcaption-bg: hsl(0, 0%, 27%);
 
-  --next-btn-bg: #dc143c;
+  --next-btn-bg: skyblue;
   --prev-btn-bg: #111;
   --next-btn: #fff;
   --prev-btn: #eee;
