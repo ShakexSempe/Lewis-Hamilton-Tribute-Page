@@ -213,7 +213,7 @@ header a:active {
   height: 90vh;
   display: grid;
   place-items: center;
-  padding: 5vh 0;
+  padding: 5vh 5vw;
 }
 
 #slides {
@@ -462,7 +462,7 @@ footer a{
   }
 
   .mySlides {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     object-position: center;
     object-fit: contain;
@@ -473,10 +473,7 @@ footer a{
     width: 100%;
   }
   #slides button {
-    padding: .5em;
-  }
-  #slide button:active {
-    opacity: .3;
+    padding: .65rem;
   }
 
   .image-grid {
@@ -494,10 +491,7 @@ footer a{
     width: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0px;
-  }
-  #slides {
-    padding: 0px 5vw;
-    width: 100%;
+    padding: 0 0.5rem;
   }
   #tribute-info li{
     margin: .5em 0;
