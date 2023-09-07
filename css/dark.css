@@ -30,10 +30,10 @@
 
   --next-btn-bg: skyblue;
   --prev-btn-bg: #111;
-  --next-btn: #fff;
+  --next-btn: #000;
   --prev-btn: #eee;
   --quote: #161616;
 
-  --border: #000;
+  --border: hsl(0, 0%, 27%);
 
 }

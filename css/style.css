@@ -81,9 +81,7 @@ a {
   color: var(--link);
   transition: .25s;
 }
-a:hover {
-  color: var(--linkHov);
-}
+
 
 p {
   line-height: 1.6;
@@ -112,6 +110,11 @@ nav {
 
 nav i {
   color: var(--icon);
+  cursor: default;
+  transition: .125s;
+}
+nav i:active {
+  color: var(--link);
 }
 
 #main {
@@ -263,6 +266,8 @@ header a:active {
   border-radius: var(--border-radius-sm);
   border: none;
   padding: .85rem;
+  font-size: .85rem;
+  font-size: clamp(.85rem, 2vw, 1rem);
   cursor: pointer;
   transition: .25s;
   box-shadow: var(--box-shadow);
@@ -412,13 +417,13 @@ ol {
 /*end of section*/
 
 #link {
-  align-items: center;
+  align-items: left;
   padding: 1rem 5vw;
   font-size: 1rem;
 }
 footer{
   font-size: 1rem;
-  align-items: center;
+  align-items: left;
 }
 footer p{
   text-transform: capitalize;
