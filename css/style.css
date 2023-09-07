@@ -369,7 +369,7 @@ ol {
   margin: 1rem auto;
   border-radius: var(--border-radius-sm);
   overflow: hidden;
-  /* height: 30vh; */
+  height: 40vh;
   /* border: 1px solid var(--border); */
 }
 .image-grid figure {
