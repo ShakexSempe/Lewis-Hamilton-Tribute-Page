@@ -326,7 +326,7 @@ header a:active {
 @media (min-width: 768px) {
   #tribute-info h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 10vh;
   }
 }
 
@@ -340,7 +340,7 @@ header a:active {
   color: var(--sectionP);
   font-size: 1rem;
   font-size: clamp(1rem, 2vw, 1.125rem);
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
 }
 
 #tribute-info a {
@@ -361,6 +361,36 @@ ol {
   justify-content: center;
   align-items: center;
   gap: 5vh;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1rem auto;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  /* height: 30vh; */
+  /* border: 1px solid var(--border); */
+}
+.image-grid figure {
+  width: 100%;
+  overflow: hidden;
+}
+.image-grid img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .25s;
+}
+.image-grid img:hover {
+  transform: scale(1.025);
+}
+
+.image-grid figure:nth-child(1) img:hover {
+    transform-origin: left;
+}
+.image-grid figure:nth-child(3) img:hover {
+  transform-origin: right;
 }
 
 
@@ -416,6 +446,11 @@ footer a{
   }
   #slides button {
     padding: .5em;
+  }
+
+  .image-grid {
+    gap: 0;
+    height: 30vh;
   }
 }
 
