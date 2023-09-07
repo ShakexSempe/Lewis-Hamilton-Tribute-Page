@@ -90,6 +90,13 @@ p {
   color: var(--sectionP);
 }
 
+h2 {
+  font-size: 1.025rem;
+  font-size: clamp(1.025rem, 2.5vw, 1.5rem);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
 /* NAV BAR */
 nav {
   position: sticky;
@@ -97,7 +104,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .2rem 5vw;
+  padding: .15rem 5vw;
   z-index: 10;
   background: var(--secondBody);
   box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.1);
@@ -144,7 +151,7 @@ header a {
   background: linear-gradient(90deg, #000, #111);
   padding: .65rem 1rem;
   font-weight: 500;
-  width: 10rem;
+  width: 12rem;
   text-align: left;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
@@ -279,11 +286,6 @@ header a:active {
   /* border: 2px solid red; */
 }
 
-.quote h2 {
-  font-size: 1.025rem;
-  font-size: clamp(1.025rem, 2.5vw, 1.5rem);
-  margin-bottom: 1.25rem;
-}
 
 .quote p {
   margin-bottom: 1rem;
@@ -316,19 +318,7 @@ header a:active {
   font-size: clamp(1.125rem, 2vw, 1.25rem);
   color: var(--list-title);
 }
-#tribute-info h2 {
-  font-size: 1.5rem;
-  font-size: 1.025rem;
-  font-size: clamp(1.025rem, 2.5vw, 1.5rem);
-  margin-bottom: 1rem;
-  text-align: left;
-}
-@media (min-width: 768px) {
-  #tribute-info h2 {
-    text-align: center;
-    margin-bottom: 10vh;
-  }
-}
+
 
 
 #tribute-info li {
@@ -421,6 +411,11 @@ footer a{
 
 
 @media screen and (max-width: 768px) {
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
   header a {
     cursor: default;
   }
