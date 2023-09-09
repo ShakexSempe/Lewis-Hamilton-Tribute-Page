@@ -393,6 +393,28 @@ ol {
 .image-grid figure {
   width: 100%;
   overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+}
+.image-grid figure figcaption {
+  position: absolute;
+  color: #fff;
+  text-transform: capitalize;
+  padding: .25rem;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: hsla(0, 0%, 0%, .7);
+  cursor: default;
+  opacity: 0;
+  transition: .25s;
+  z-index: 5;
+}
+
+.image-grid figure figcaption:hover {
+  opacity: 1;
 }
 
 .image-grid figure:nth-of-type(2){
