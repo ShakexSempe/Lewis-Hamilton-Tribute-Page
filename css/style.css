@@ -412,7 +412,7 @@ ol {
   transition: .25s;
   z-index: 5;
   font-size: .65rem;
-  font-size: clamp(.65rem, 1vw, 1rem);
+  font-size: clamp(.75rem, 1vw, 1rem);
   text-align: center;
 }
 
@@ -515,7 +515,7 @@ footer a{
 
   .image-grid {
     gap: 0;
-    height: 30vh;
+    height: 35vh;
   }
 }
 
