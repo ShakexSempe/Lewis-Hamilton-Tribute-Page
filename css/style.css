@@ -337,13 +337,14 @@ header a:active {
 #tribute-info .title-number {
   font-weight: 600;
   margin-bottom: .25rem;
+  color: var(--list-title);
 }
 #tribute-info span{
   font-weight: 700;
   padding-left: .5rem;
   font-size: 1.125rem;
   font-size: clamp(1.125rem, 2vw, 1.25rem);
-  color: var(--list-title);
+  color: initial;
 }
 
 
