@@ -411,6 +411,9 @@ ol {
   opacity: 0;
   transition: .25s;
   z-index: 5;
+  font-size: .65rem;
+  font-size: clamp(.65rem, 1vw, 1rem);
+  text-align: center;
 }
 
 .image-grid figure figcaption:hover {
